@@ -16,6 +16,7 @@ export class PasswordService {
 
   public async generatePassword(): Promise<{ password: string; hash: string }> {
     const password = generatePassword(6);
+    console.log(password);
     const hash = await this.hash(password);
 
     return { password, hash };

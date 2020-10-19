@@ -1,2 +1,2 @@
-import 'jest-extended';
 import '../../../knexfile';
+import 'jest-extended';

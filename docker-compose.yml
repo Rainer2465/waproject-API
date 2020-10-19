@@ -16,7 +16,7 @@ services:
 
   database:
     container_name: waproject-database
-    image: postgres:11.5-alpine
+    image: postgres
     environment:
       - POSTGRES_DB=waproject
       - POSTGRES_USER=docker
