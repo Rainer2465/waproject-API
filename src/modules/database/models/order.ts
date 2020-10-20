@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Model } from 'objection';
+
 import { IOrder } from '../interfaces/order';
 import { User } from './user';
 
@@ -26,7 +27,7 @@ export class Order extends Model implements IOrder {
         modelClass: User,
         filter: (query: any) => query.select('id', 'firstName', 'lastName', 'email'),
         join: {
-          from: 'User.id',
+          from: 'User.id', //pegando o user.id e migrando para nova tabela
           to: 'Orders.user_id'
         }
       }
